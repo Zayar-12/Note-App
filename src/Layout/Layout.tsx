@@ -1,15 +1,17 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router';
+import { Link, NavLink, Outlet } from 'react-router';
+import { useTheme } from '../context/ThemeContext';
 const Layout = () => {
+  const{theme,toggleTheme}=useTheme();
   return (
-    <div>
+    <div className='min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-200'>
         <nav>
-            <Link to={"/"}>Home</Link>
+             <NavLink to={"/"} className={({isActive})=>isActive?"font-bold text-blue-500":""}>Home</NavLink>
         </nav>
 
         <nav>
-            <Link to={"/new"}>New Note</Link>
-           <button>Mode</button>
+            <NavLink to={"/new"} className={({isActive})=>isActive?"font-bold text-blue-500":""}>New Note</NavLink>
+           <button onClick={toggleTheme}>{theme}Mode</button>
         </nav>
 
         <Outlet/>

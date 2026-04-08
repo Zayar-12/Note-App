@@ -27,7 +27,7 @@ const NoteDetail = () => {
    document.title=`Note App | ${note.title}`
       
    return ()=>{document.title="Note App"}
-    },[])
+    },[edit])
 
   return (
   <>

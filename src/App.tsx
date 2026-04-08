@@ -7,6 +7,7 @@ import { dashboardLoader, detailNote } from './loaders/NoteLoader'
 import { addNewNote } from './actions/formAction'
 import NoteDetail from './pages/NoteDetail'
 import { updatedNote } from './actions/updateAction'
+import { ThemeProvider } from './context/ThemeContext'
 
 const App = () => {
 
@@ -37,8 +38,10 @@ const App = () => {
     }
   ])
   return (
+    <ThemeProvider>
+<RouterProvider router={router}/>
+    </ThemeProvider>
     
-    <RouterProvider router={router}/>
 
   )
 }

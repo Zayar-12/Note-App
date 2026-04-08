@@ -5,7 +5,7 @@ import type { Note } from "../types/NoteStructure";
 
 
   const STORAGE_KEY="card_note";
-
+  export  const THEME_KEY="theme";
 //get All notes
   export const getNotes=():Note[]=>{
       
@@ -66,5 +66,14 @@ import type { Note } from "../types/NoteStructure";
     localStorage.setItem(STORAGE_KEY,JSON.stringify(newNotes));
 
     return newNotes;
+  }
+
+  export const saveTheme=(theme:string):void=>{
+    
+    if (theme === 'dark') {
+    localStorage.setItem(THEME_KEY, 'dark');
+  } else {
+    localStorage.removeItem(THEME_KEY);
+  }
   }
 
