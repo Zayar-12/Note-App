@@ -5,7 +5,9 @@ import { saveTheme, THEME_KEY } from "../utils/Utilityfunction";
   
   interface ThemeContextType{
     theme:Theme,
-    toggleTheme:()=>void
+    toggleTheme:()=>void,
+    search:string,
+    setSearch:(value:string)=>void,
   }
 
 
@@ -17,6 +19,8 @@ import { saveTheme, THEME_KEY } from "../utils/Utilityfunction";
     const[theme,setTheme]=useState<Theme>(()=>{
      return localStorage.getItem(THEME_KEY)==="dark"?'dark':'light'
     });
+
+    const [search,setSearch]=useState("");
     
 
     useEffect(()=>{
@@ -34,7 +38,7 @@ import { saveTheme, THEME_KEY } from "../utils/Utilityfunction";
     }
 
     return(
-     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+     <ThemeContext.Provider value={{ theme, toggleTheme,search,setSearch }}>
       {children}
     </ThemeContext.Provider>
         
