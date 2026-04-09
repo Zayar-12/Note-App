@@ -9,7 +9,7 @@ import { CiSearch } from "react-icons/ci";
 
 
 const Layout = () => {
-  const{theme,toggleTheme,search,setSearch}=useTheme();
+  const{theme,toggleTheme,setSearch}=useTheme();
    
 
 

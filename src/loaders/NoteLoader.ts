@@ -1,4 +1,4 @@
-import { redirect, useParams, type LoaderFunctionArgs } from "react-router";
+import { redirect, type LoaderFunctionArgs } from "react-router";
 import { getNote, getNotes } from "../utils/Utilityfunction"
 
  
