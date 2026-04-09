@@ -61,8 +61,6 @@
 
 // export default Dashboard
 
-
-import React, { useState } from 'react'
 import { Link, useLoaderData } from 'react-router'
 import type { Note } from '../types/NoteStructure'
 import { useTheme } from '../context/ThemeContext'

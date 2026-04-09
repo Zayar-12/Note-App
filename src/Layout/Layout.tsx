@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link, NavLink, Outlet } from 'react-router';
+
+import {  NavLink, Outlet } from 'react-router';
 import { useTheme } from '../context/ThemeContext';
-import { MdDarkMode } from "react-icons/md";
+
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { AiFillHome } from "react-icons/ai";
